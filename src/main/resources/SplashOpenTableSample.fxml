@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="108.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="additionalScenes.SplashOpenTableController">
+   <children>
+      <Label alignment="CENTER" layoutX="96.0" layoutY="44.0" prefHeight="21.0" prefWidth="55.0" text="Loading" />
+   </children>
+</AnchorPane>
