@@ -26,6 +26,7 @@ import java.security.GeneralSecurityException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -53,13 +54,7 @@ public class GoogleTableController implements Initializable {
     }
     private TableColumn<ObservableList<StringProperty>, String> createColumn(final int columnIndex, String columnTitle,TableColumn<ObservableList<StringProperty>, String> column) {
         column = new TableColumn<>();
-        String title;
-        if (columnTitle == null || columnTitle.trim().length() == 0) {
-            title = "Column " + (columnIndex + 1);
-        } else {
-            title = columnTitle;
-        }
-        column.setText(title);
+        column.setText(columnTitle);
         column.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ObservableList<StringProperty>, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<ObservableList<StringProperty>, String> cellDataFeatures) {
@@ -81,8 +76,24 @@ public class GoogleTableController implements Initializable {
             List<List<Object>> in = DataGenerator.getNext();
             @Override
             protected Void call() throws Exception {
+                //header
+                Iterator iter=in.iterator();
+                    final Object headerLine = iter.next();
+                    final List<Object> headerValues = (List<Object>) headerLine;
+                    Iterator headerIter= headerValues.iterator();
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            for (int Column = 0; Column < headerValues.size(); Column++) {
+                                table.getColumns().add(
+                                        createColumn(Column, (String) headerIter.next(),column));
+                            }
+                        }
+                    });
 
                 // Data:
+                in.remove(0);
+
 
                 String dataLine;
                 for(List list : in) {

@@ -56,43 +56,11 @@ public class sheetsJava {
                 .build();
 
     }
-    /*public static List<List<Object>> getValuesTest() throws GeneralSecurityException, IOException {
-        InputStream in= sheetsJava.class.getResourceAsStream("/credentials.json");
-        GoogleClientSecrets clientSecrets=GoogleClientSecrets.load(JacksonFactory.getDefaultInstance(),new InputStreamReader(in));
-
-        List<String> scopes = Arrays.asList(SheetsScopes.SPREADSHEETS);
-
-        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
-                GoogleNetHttpTransport.newTrustedTransport(),JacksonFactory.getDefaultInstance(),clientSecrets,scopes)
-                .setDataStoreFactory(new FileDataStoreFactory(new java.io.File("tokens")))
-                .setAccessType("offline")
-                .build();
-
-        Credential credential =new AuthorizationCodeInstalledApp(
-                flow, new LocalServerReceiver())
-                .authorize("user");
-
-        List<List<Object>> values;
-        sheetsService= new Sheets.Builder(
-                GoogleNetHttpTransport.newTrustedTransport(),JacksonFactory.getDefaultInstance(),credential)
-                .setApplicationName(aplication_name)
-                .build();
-        String range="sheet1!A1:D5";
-
-        ValueRange response=sheetsService.spreadsheets().values()
-                .get(Global.getGoogleSheet_ID(),range)
-                .execute();
-        System.out.println(SPREADSHEET_ID);
-        values= response.getValues();
-
-        return values;
-    }*/
-
     public static List<List<Object>> getValues() throws IOException, GeneralSecurityException {
         List<List<Object>> values = null;
         sheetsService=getSheetsService();
-        String range="sheet1!A1:D5";
-
+        String range=Global.getSheetName_reminder()+"!A1:Z100";
+        System.out.println(range);
         try {
             ValueRange response=sheetsService.spreadsheets().values()
                     .get(Global.getGoogleSheet_ID(),range)
@@ -105,4 +73,5 @@ public class sheetsJava {
 
         return values;
     }
+
 }

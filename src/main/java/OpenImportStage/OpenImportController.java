@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import model.GoogleSheetsKeysTable;
+import model.SheetTable;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,16 +30,20 @@ public class OpenImportController implements Initializable {
         keyGetter.keyAndNameGetter();
         String key=keyGetter.getKey();
         String nameOfTable=keyGetter.getNameOfTable();
+        String SheetName=keyGetter.getSheetName();
         if(!(key.isEmpty()&&nameOfTable.isEmpty())) {
             System.out.println(key);
             System.out.println(nameOfTable);
             GoogleSheetsKeysTable g = new GoogleSheetsKeysTable();
-            g.setId(Global.getId_reminder());
             g.setKey(key);
             g.setNameOfKey(nameOfTable);
+            g.setSecondId(Global.getId_reminder());
             entityManager.getTransaction().begin();
             entityManager.persist(g);
-
+            SheetTable s =new SheetTable();
+            s.setSheetName(SheetName);
+            s.setTableId(g.getId());
+            entityManager.persist(s);
             entityManager.getTransaction().commit();
             System.out.println("Table imported");
             Alert.display("Notification", "Table imported");

@@ -10,6 +10,7 @@ import javafx.geometry.*;
 public class KeyGetter {
     private  String key;
     private  String nameOfTable;
+    private  String SheetName;
     public  void keyAndNameGetter(){
         Stage window= new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
@@ -19,11 +20,14 @@ public class KeyGetter {
         TextField keyField=new TextField();
         Label label2=new Label("Table Name:");
         TextField TableNameField=new TextField();
+        Label label3=new Label("Table Sheet:");
+        TextField TableSheetField=new TextField();
 
         Button okButton=new Button("Import");
         okButton.setOnAction(e -> {
             key=keyField.getText();
             nameOfTable=TableNameField.getText();
+            SheetName = TableSheetField.getText();
             window.close();
         });
 
@@ -33,11 +37,14 @@ public class KeyGetter {
         HBox layoutForField2=new HBox(5);
         layoutForField2.getChildren().addAll(label2,TableNameField);
         layoutForField2.setAlignment(Pos.CENTER);
+        HBox layoutForField3=new HBox(5);
+        layoutForField3.getChildren().addAll(label3,TableSheetField);
+        layoutForField3.setAlignment(Pos.CENTER);
         VBox layout = new VBox(20);
-        layout.getChildren().addAll(layoutForField1,layoutForField2,okButton);
+        layout.getChildren().addAll(layoutForField1,layoutForField2,layoutForField3,okButton);
         layout.setAlignment(Pos.CENTER);
 
-        Scene scene= new Scene(layout,350,150);
+        Scene scene= new Scene(layout,350,200);
         window.setScene(scene);
         window.showAndWait();
 
@@ -50,4 +57,6 @@ public class KeyGetter {
     public String getNameOfTable() {
         return nameOfTable;
     }
+
+    public String getSheetName() {  return SheetName;  }
 }

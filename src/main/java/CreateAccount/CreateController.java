@@ -20,6 +20,9 @@ import static constants.Constants.entityManagerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
+import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -33,6 +36,11 @@ public class CreateController {
 
     @FXML
     private PasswordField repeatPassword;
+
+    @FXML
+    void backAction(ActionEvent event) throws IOException {
+        changeScene(event,"/loginSample.fxml","Log In");
+    }
 
     @FXML
     void createAccount(ActionEvent event) throws Exception {
@@ -52,11 +60,28 @@ public class CreateController {
              accountHiber.setMailAdress(mail.getText());
              accountHiber.setPassword(password.getText());
 
-              entityManager.getTransaction().begin();
+             String qlQuery = "SELECT a.mailAdress FROM AccountTable a WHERE a.mailAdress LIKE('" + mail.getText() + "')";
+             Query usernameQuery = entityManager.createQuery(qlQuery);
+             List username = usernameQuery.getResultList();
+             if(username.size()==0){
+                 System.out.println("ok");
+                 System.out.println(username);
 
-              entityManager.persist(accountHiber);
+                 entityManager.getTransaction().begin();
 
-              entityManager.getTransaction().commit();
+                 entityManager.persist(accountHiber);
+
+                 entityManager.getTransaction().commit();
+
+                 System.out.println("Account created");
+                 Alert.display("Notification", "Account Created");
+                 changeScene(event,"/loginSample.fxml","Log In");
+             }
+             else {
+                 System.out.println("Gmail already taken");
+                 Alert.display("Notification", "Gmail already used");
+             }
+
 
 
           }catch (NullPointerException e){
@@ -64,9 +89,7 @@ public class CreateController {
           }finally {
 
           }
-            System.out.println("Account created");
-            Alert.display("Notification", "Account Created");
-            changeScene(event,"/loginSample.fxml","Log In");
+
         }
         else {
             System.out.println("fail");
