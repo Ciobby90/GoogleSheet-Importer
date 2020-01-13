@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35e444eb-3938-4ff5-9d54-bcf12cba77a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccount/CreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccount/CreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GoogleTableStage/GoogleTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GoogleTableStage/GoogleTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenImportStage/KeyGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenImportStage/KeyGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenImportStage/OpenImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenImportStage/OpenImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenTableStage/OpenTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenTableStage/OpenTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SheetDataExtracter/sheetsJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SheetDataExtracter/sheetsJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Global.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/GoogleSheetsKeysTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GoogleSheetsKeysTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/createSample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/createSample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CreateAccount/CreateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CreateAccount/CreateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$DataGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController$DataGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoogleTableStage/GoogleTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/gabiWork.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OpenImportStage/KeyGetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OpenImportStage/KeyGetter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OpenImportStage/OpenImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OpenImportStage/OpenImportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OpenTableStage/OpenTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OpenTableStage/OpenTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SheetDataExtracter/sheetsJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SheetDataExtracter/sheetsJava.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/Global.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/Global.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/createSample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/createSample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/GoogleSheetsKeysTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/GoogleSheetsKeysTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
-    </list>
+    <list default="true" id="35e444eb-3938-4ff5-9d54-bcf12cba77a4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +124,14 @@
       <option name="presentableId" value="Default" />
       <updated>1575196799068</updated>
     </task>
+    <task id="LOCAL-00001" summary="ok">
+      <created>1578942337360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578942337360</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,5 +146,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
 </project>
